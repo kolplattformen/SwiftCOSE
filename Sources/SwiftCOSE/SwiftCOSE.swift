@@ -1,13 +1,14 @@
-@testable import SwiftCBOR
-@testable import GRPC
-@testable import NIO
+import SwiftCBOR
+import GRPC
+import NIO
+import Foundation
 
 struct SwiftCOSE {
     var text = "Hello, World!"
 }
 
 extension String {
-    func fromBase45()->Data {
+    func fromBase45() -> Data {
         let BASE45_CHARSET = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ $%*+-./:"
         var d = Data()
         var o = Data()
@@ -31,4 +32,9 @@ extension String {
         return o
     }
 
+}
+
+func decodeCose(data: [UInt8]) {
+    
+    
 }
